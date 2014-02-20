@@ -34,8 +34,6 @@
 #import "NSDate+DSLCalendarView.h"
 @protocol DSLCalendarViewDelegate;
 
-BOOL doNotSelectDay;
-
 
 @interface DSLCalendarView : UIView
 
