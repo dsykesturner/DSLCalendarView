@@ -461,6 +461,9 @@
     }
     
     if ([self.delegate respondsToSelector:@selector(calendarView:didSelectRange:)]) {
+        if (doNotSelectDay == YES) {
+            self.selectedRange = nil;
+        }
         [self.delegate calendarView:self didSelectRange:self.selectedRange];
     }
 
