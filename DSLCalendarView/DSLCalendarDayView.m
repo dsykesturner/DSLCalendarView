@@ -109,10 +109,10 @@
 - (void)drawBackground {
     if (self.selectionState == DSLCalendarDayViewNotSelected) {
         if (self.isInCurrentMonth) {
-            [[UIColor colorWithWhite:245.0/255.0 alpha:1.0] setFill];
+            [[UIColor colorWithWhite:255.0/255.0 alpha:1.0] setFill];
         }
         else {
-            [[UIColor colorWithWhite:225.0/255.0 alpha:1.0] setFill];
+            [[UIColor colorWithWhite:235.0/255.0 alpha:1.0] setFill];
         }
         UIRectFill(self.bounds);
     }
@@ -141,7 +141,7 @@
 }
 
 - (void)drawBorders {
-    CGContextRef context = UIGraphicsGetCurrentContext();
+    /*CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextSetLineWidth(context, 1.0);
     
@@ -164,7 +164,7 @@
     CGContextAddLineToPoint(context, self.bounds.size.width - 0.5, self.bounds.size.height - 0.5);
     CGContextAddLineToPoint(context, 0.0, self.bounds.size.height - 0.5);
     CGContextStrokePath(context);
-    CGContextRestoreGState(context);
+    CGContextRestoreGState(context);*/
 }
 
 - (void)drawDayNumber {

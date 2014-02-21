@@ -86,7 +86,7 @@
 }
 
 - (void)commonInit {
-    _dayViewHeight = 44;
+    _dayViewHeight = 40;
     
     _visibleMonth = [[NSCalendar currentCalendar] components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit | NSCalendarCalendarUnit fromDate:[NSDate date]];
     _visibleMonth.day = 1;
