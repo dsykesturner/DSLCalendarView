@@ -35,7 +35,7 @@
 @protocol DSLCalendarViewDelegate;
 
 BOOL doNotSelectDay;
-
+NSDateComponents *todayDate;
 
 @interface DSLCalendarView : UIView
 

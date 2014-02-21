@@ -462,7 +462,7 @@
     
     if ([self.delegate respondsToSelector:@selector(calendarView:didSelectRange:)]) {
         if (doNotSelectDay == YES) {
-            self.selectedRange = nil;
+            self.selectedRange = [[DSLCalendarRange alloc] initWithStartDay:todayDate endDay:todayDate];
         }
         [self.delegate calendarView:self didSelectRange:self.selectedRange];
     }
