@@ -80,6 +80,7 @@
     }
     
     self.titleLabel.text = [NSString stringWithFormat:@"%d", day.day];
+    self.titleLabel.textColor = [UIColor whiteColor];
 
     CGFloat const imagePadding = 15.0;
     CGRect frame = self.frame;

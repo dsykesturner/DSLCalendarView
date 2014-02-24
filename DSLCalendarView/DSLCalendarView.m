@@ -187,10 +187,10 @@
 
 - (void)updateMonthLabelMonth:(NSDateComponents*)month {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"MMMM yyyy";
+    formatter.dateFormat = @"MMMM";
     
     NSDate *date = [month.calendar dateFromComponents:month];
-    self.monthSelectorView.titleLabel.text = [formatter stringFromDate:date];
+    self.monthSelectorView.titleLabel.text = [[formatter stringFromDate:date] lowercaseString];
 }
 
 - (NSString*)monthViewKeyForMonth:(NSDateComponents*)month {

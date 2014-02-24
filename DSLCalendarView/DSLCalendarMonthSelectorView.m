@@ -95,7 +95,7 @@
     
     // Set the day name label texts to localised day names
     for (UILabel *label in self.dayLabels) {
-        label.text = [[dayNames objectForKey:@(label.tag)] uppercaseString];
+        label.text = [[dayNames objectForKey:@(label.tag)] lowercaseString];
     }
 }
 
