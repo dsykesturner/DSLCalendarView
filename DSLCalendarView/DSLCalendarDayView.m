@@ -108,12 +108,7 @@
 
 - (void)drawBackground {
     if (self.selectionState == DSLCalendarDayViewNotSelected) {
-        if (self.isInCurrentMonth) {
-            [[UIColor colorWithWhite:255.0/255.0 alpha:1.0] setFill];
-        }
-        else {
-            [[UIColor colorWithWhite:235.0/255.0 alpha:1.0] setFill];
-        }
+        [[UIColor colorWithWhite:255.0/255.0 alpha:1.0] setFill];
         UIRectFill(self.bounds);
     }
     else {
@@ -170,12 +165,19 @@
 - (void)drawDayNumber {
     if (self.selectionState == DSLCalendarDayViewNotSelected) {
         [[UIColor colorWithWhite:66.0/255.0 alpha:1.0] set];
+        
+        if (self.isInCurrentMonth) {
+            [[UIColor colorWithWhite:66.0/255.0 alpha:1.0] set];
+        }
+        else {
+            [[UIColor colorWithWhite:175.0/255.0 alpha:1.0] set];
+        }
     }
     else {
         [[UIColor whiteColor] set];
     }
     
-    UIFont *textFont = [UIFont boldSystemFontOfSize:17.0];
+    UIFont *textFont = [UIFont fontWithName:@"Helvetica Light" size:17.0];
     CGSize textSize = [_labelText sizeWithFont:textFont];
     
     CGRect textRect = CGRectMake(ceilf(CGRectGetMidX(self.bounds) - (textSize.width / 2.0)), ceilf(CGRectGetMidY(self.bounds) - (textSize.height / 2.0)), textSize.width, textSize.height);
