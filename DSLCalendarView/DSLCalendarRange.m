@@ -51,19 +51,23 @@
 #pragma mark - Initialisation
 
 // Designated initialiser
-- (id)initWithStartDay:(NSDateComponents *)start endDay:(NSDateComponents *)end {
-    NSParameterAssert(start);
-    NSParameterAssert(end);
-    
-    self = [super init];
-    if (self != nil) {
-        // Initialise properties
-        _startDay = [start copy];
-        _startDate = [start date];
-        _endDay = [end copy];
-        _endDate = [end date];
+- (id)initWithStartDay:(NSDateComponents *)start endDay:(NSDateComponents *)end
+{    
+    if (start != nil && end != nil)
+    {
+        NSParameterAssert(start);
+        NSParameterAssert(end);
+        
+        self = [super init];
+        if (self != nil) {
+            // Initialise properties
+            _startDay = [start copy];
+            _startDate = [start date];
+            _endDay = [end copy];
+            _endDate = [end date];
+        }
     }
-
+    
     return self;
 }
 
